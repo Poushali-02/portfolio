@@ -1,6 +1,6 @@
 import '../App.css';
 import '../Css/projects.css';
-import projects from '../Components/projects/allProjects.js'; // adjust path if needed
+import projects from '../Components/projects/allProjects.js';
 
 function Projects() {
   return (
