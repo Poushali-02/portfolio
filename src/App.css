@@ -3,7 +3,7 @@
 .portfolio-bg {
   min-height: 100vh;
   width: 100vw;
-  background: #0a0a0a;
+  background: #1b1b1b;
   position: relative;
   overflow: hidden;
   font-family: 'Georgia', 'Times New Roman', Times, serif;
@@ -15,16 +15,20 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 40px), repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 40px);
+  background-image: url("./assets/bg.png");
+  opacity: 30%;
 }
 
+/* Navbar */
 .portfolio-navbar {
   width: 100%;
-  padding: 1.5rem 0 1rem 0;
+  padding: 2.5rem 5rem 1rem 0;
   background: transparent;
   z-index: 2;
   position: relative;
 }
+
+/* Navbar urls */
 .portfolio-navbar ul {
   display: flex;
   justify-content: center;
@@ -45,6 +49,7 @@
   color: #b3aaff;
 }
 
+/* Navbar main */
 .portfolio-main {
   display: flex;
   flex-direction: row;
@@ -65,53 +70,6 @@
 .portfolio-name-box {
   margin-bottom: 1.5rem;
 }
-.portfolio-name {
-  font-size: 4vw;
-  font-family: 'Merriweather', 'Georgia', serif;
-  font-weight: 900;
-  color: #fff;
-  margin: 0;
-  line-height: 1.1;
-  text-shadow: 2px 2px 8px #000, 0 2px 8px #222;
-}
-.portfolio-subtitle {
-  font-size: 1.3vw;
-  font-family: 'Merriweather', 'Georgia', serif;
-  color: #fff;
-  font-weight: 600;
-  margin-top: 0.5rem;
-  letter-spacing: 0.08em;
-}
-.portfolio-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 6vw;
-}
-.portfolio-profile-pic {
-  width: 22vw;
-  height: 22vw;
-  max-width: 400px;
-  max-height: 400px;
-  min-width: 220px;
-  min-height: 220px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 0 40px 0 #000a, 0 4px 32px #222a;
-  border: 4px solid #fff2;
-  background: #222;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.portfolio-profile-pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
 
 @media (max-width: 900px) {
   .portfolio-main {
@@ -123,17 +81,5 @@
     padding: 0;
     align-items: center;
     justify-content: center;
-  }
-  .portfolio-name {
-    font-size: 7vw;
-  }
-  .portfolio-subtitle {
-    font-size: 2.2vw;
-  }
-  .portfolio-profile-pic {
-    width: 40vw;
-    height: 40vw;
-    min-width: 120px;
-    min-height: 120px;
   }
 }
