@@ -17,7 +17,7 @@
 
 .about-title {
   font-family: 'Merriweather', 'Georgia', serif;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 400;
   margin-bottom: 2rem;
   color: #fff;
@@ -52,8 +52,8 @@
   max-width: 1050px;
   height: 100px;
   border-radius: 16px;
+  border: 3px solid rgba(212, 160, 241, 0.35);
   background: rgba(0, 0, 0, 0.35);
-  border: 2px solid rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,6 +78,7 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: #fff;
+  border: 3px solid rgba(212, 160, 241, 0.35);
   opacity: 0.75;
 }
 
