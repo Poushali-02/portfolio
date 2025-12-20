@@ -48,7 +48,7 @@ const Experiences = [
         a SGPA above 9, demonstrating strong grasp of core computer science fundamentals and consistent
          academic discipline. This experience reflects the ability to quickly adapt to a new academic 
          environment, manage multiple subjects in parallel, and maintain high performance under exam pressure.`,
-        images: ["src/Components/Images/prize.jpeg"],
+        images: ["src/assets/prize.jpeg"],
         type: "Achievement"
     },
     {
@@ -58,7 +58,7 @@ const Experiences = [
         the constrained hackathon timeframe. Gained hands‑on experience in problem‑solving 
         under time pressure, dividing responsibilities across development and 
         presentation, and learning how to turn vague problem statements into working technical prototypes.`,
-        images: ["src/Components/Images/binary1.jpeg", "src/Components/Images/binary2.jpeg"],
+        images: ["src/assets/binary1.jpeg", "src/assets/binary2.jpeg"],
         type: "Activity"
     },
 ]
