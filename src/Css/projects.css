@@ -1,4 +1,4 @@
-/* Projects Section Styles */
+
 .projects-section-bg {
 	width: 100vw;
 	min-height: 100vh;
@@ -9,24 +9,26 @@
 }
 
 .project-left, .project-right {
-    flex: 0 50% 0;          /* 2 items per column */
+    flex: 0 50% 0;
 	display: flex;
 	justify-content: center;
 }
-
 .project-card {
 	border: 3px solid #b39cff;
 	box-shadow: 0 0 24px 0 #000a;
 	border-radius: 0.5vw;
 	padding: 2.5vw 2vw 1.5vw 2vw;
 	width: 100%;
-  	max-width: 480px;
+	max-width: 480px;
 	min-width: 260px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	position: relative;
+	transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+	will-change: transform, box-shadow;
+	cursor:default;
 }
 
 .projects-title {
@@ -41,6 +43,12 @@
 
 .project-card:nth-child(2) {
 	border-color: #b3b3b3;
+}
+
+
+.project-card:hover {
+	transform: translateY(-8px) scale(1.035);
+	box-shadow: 0 8px 32px 0 #b39cff55, 0 0 24px 0 #000a;
 }
 
 .project-name {
@@ -70,9 +78,9 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+  cursor: pointer
 }
 
-/* Live link button */
 .project-live-link {
   padding: 0.4rem 0.9rem;
   border-radius: 999px;

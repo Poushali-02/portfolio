@@ -1,4 +1,9 @@
-.portfolio-name {
+
+
+.intro-name-box {
+  margin-bottom: 1.5rem;
+}
+.intro-name {
   font-size: 4vw;
   font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 900;
@@ -7,7 +12,8 @@
   line-height: 1.1;
   text-shadow: 2px 2px 8px #000, 0 2px 8px #222;
 }
-.portfolio-subtitle {
+  
+.intro-subtitle {
   font-size: 1.3vw;
   font-family: 'Merriweather', 'Georgia', serif;
   color: #fff;
@@ -15,14 +21,8 @@
   margin-top: 0.5rem;
   letter-spacing: 0.08em;
 }
-.portfolio-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 6vw;
-}
-.portfolio-profile-pic {
+
+.intro-profile-pic {
   width: 22vw;
   height: 22vw;
   max-width: 400px;
@@ -38,7 +38,8 @@
   align-items: center;
   justify-content: center;
 }
-.portfolio-profile-pic img {
+
+.intro-profile-pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -48,13 +49,13 @@
 
 @media (max-width:900px)
 {
-.portfolio-name {
+.intro-name {
     font-size: 7vw;
   }
-.portfolio-subtitle {
+.intro-subtitle {
     font-size: 2.2vw;
   }
-.portfolio-profile-pic {
+.intro-profile-pic {
     width: 40vw;
     height: 40vw;
     min-width: 120px;
