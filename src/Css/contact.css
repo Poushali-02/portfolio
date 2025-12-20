@@ -286,7 +286,6 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ==== RESPONSIVE ==== */
 @media (max-width: 900px) {
   .contact-section {
     padding: 70px 24px 60px;
