@@ -22,6 +22,17 @@ function Intro() {
             <h1 className="intro-name">Bhattacharyya</h1>
           </div>
           <div className="intro-subtitle">A PASSIONATE AI DEVELOPER</div>
+          <div className="intro-links">
+            <a href="https://github.com/Poushali-02" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <a href="www.linkedin.com/in/poushali020106" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+            <a href="poushalibhattacharyya02@gmail.com">
+              Email
+            </a>
+          </div>
         </div>
         <div className="portfolio-right">
           <div className="intro-profile-pic">
