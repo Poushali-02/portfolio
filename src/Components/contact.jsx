@@ -10,10 +10,12 @@ const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 function Contact() {
   const formRef = useRef(null);
   const [status, setStatus] = useState(null); 
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus(null);
+    setLoading(true); // Block submit
 
     emailjs
       .sendForm(
@@ -30,7 +32,9 @@ function Contact() {
         () => {
           setStatus("error");
         }
-      );
+      ).finally(() => {  // ← ADD THIS
+      setLoading(false);
+    })
   };
 
   return (
@@ -76,9 +80,13 @@ function Contact() {
                 />
                 </div>
 
-                <button type="submit" className="contact-submit">
-                Send Message
-                </button>
+                <button 
+                    type="submit" 
+                    className="contact-submit"
+                    disabled={loading}
+                  >
+                    {loading ? "Sending..." : "Send Message"}
+                  </button>
 
                 {status === "success" && (
                 <p className="contact-status success">
