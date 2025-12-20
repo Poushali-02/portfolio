@@ -1,7 +1,7 @@
 import { useState } from "react"; 
 import "../App.css";
 import "../Css/skills.css";
-import skills from "./projects/skills.js"; 
+import skills from "./elements/skills.js"; 
 
 const requirementTags = Array.from(
   new Set(skills.flatMap((s) => s.requirement))
