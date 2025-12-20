@@ -1,3 +1,8 @@
+import prizeImg from '../../assets/prize.jpeg';
+import binary1Img from '../../assets/binary1.jpeg';
+import binary2Img from '../../assets/binary2.jpeg';
+
+
 const Experiences = [
     {
         title: "Community Member",
@@ -48,7 +53,7 @@ const Experiences = [
         a SGPA above 9, demonstrating strong grasp of core computer science fundamentals and consistent
          academic discipline. This experience reflects the ability to quickly adapt to a new academic 
          environment, manage multiple subjects in parallel, and maintain high performance under exam pressure.`,
-        images: ["src/assets/prize.jpeg"],
+        images: [prizeImg],
         type: "Achievement"
     },
     {
@@ -58,7 +63,7 @@ const Experiences = [
         the constrained hackathon timeframe. Gained hands‑on experience in problem‑solving 
         under time pressure, dividing responsibilities across development and 
         presentation, and learning how to turn vague problem statements into working technical prototypes.`,
-        images: ["src/assets/binary1.jpeg", "src/assets/binary2.jpeg"],
+        images: [binary1Img, binary2Img],
         type: "Activity"
     },
 ]
