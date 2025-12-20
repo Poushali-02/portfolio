@@ -9,7 +9,7 @@ const skills = [
         category: "Tech",
         subCategory: "language",
         skillname: "Python", // 1
-        requirement: ["Backend", "Machine Learning", "Deep Learning"],
+        requirement: ["Backend", "Machine Learning", "Deep Learning", "DSA"],
         level: "Intermediate",
         score: LEVEL_MAP['Intermediate']
     },
@@ -40,8 +40,8 @@ const skills = [
     {
         category: "Tech",
         subCategory: "skill",
-        skillname: "LLM fine tuning", // 5
-        requirement: ["LLM"],
+        skillname: "BERT", // 5
+        requirement: ["LLM", "AI"],
         level: "Intermediate",
         score: LEVEL_MAP['Intermediate']
     },
@@ -80,7 +80,23 @@ const skills = [
     {
         category: "Tech",
         subCategory: "language",
-        skillname: "JavScript", // 10
+        skillname: "JavaScript", // 10
+        requirement: ["Frontend"],
+        level: "Beginner",
+        score: LEVEL_MAP['Beginner']
+    },
+    {
+        category: "Tech",
+        subCategory: "language",
+        skillname: "TypeScript", // 11
+        requirement: ["Frontend"],
+        level: "Beginner",
+        score: LEVEL_MAP['Beginner']
+    },
+    {
+        category: "Tech",
+        subCategory: "styling",
+        skillname: "CSS", // 12
         requirement: ["Frontend"],
         level: "Beginner",
         score: LEVEL_MAP['Beginner']
@@ -89,14 +105,14 @@ const skills = [
         category: "Tech",
         subCategory: "language",
         requirement: ["DSA"],
-        skillname: "C++", // 11
+        skillname: "C++", // 13
         level: "Intermediate",
         score: LEVEL_MAP['Intermediate']
     },
     {
         category: "Tech",
         subCategory: "language",
-        skillname: "Sql", // 13
+        skillname: "Sql", // 14
         requirement: ["Database"],
         level: "Beginner",
         score: LEVEL_MAP['Beginner']
@@ -104,7 +120,7 @@ const skills = [
     {
         category: "Tech",
         subCategory: "language",
-        skillname: "Postgresql", // 13
+        skillname: "Postgresql", // 15
         requirement: ["Database"],
         level: "Beginner",
         score: LEVEL_MAP['Beginner']

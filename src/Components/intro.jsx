@@ -10,6 +10,7 @@ function Intro() {
           <li>Home</li>
           <li>Projects</li>
           <li>About</li>
+          <li>Skillset</li>
           <li>Experiences</li>
           <li>Contact</li>
         </ul>
