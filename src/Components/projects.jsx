@@ -4,7 +4,7 @@ import projects from '../Components/elements/allProjects.js';
 
 function Projects() {
   return (
-    <div className="portfolio-bg">
+    <div id="projects" className="portfolio-bg">
       <div className="projects-title">
         <h2>Featured Projects</h2>
       </div>

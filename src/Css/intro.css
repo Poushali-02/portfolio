@@ -66,6 +66,60 @@
   object-position: center;
   display: block;
 }
+/* initial hidden state */
+.intro-name-box,
+.intro-subtitle,
+.intro-profile-pic {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* stagger timings */
+.intro-subtitle {
+  animation-delay: 0.2s;
+}
+
+.intro-profile-pic {
+  animation-delay: 0.4s;
+}
+
+/* keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.intro-profile-pic {
+  /* existing styles ... */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.intro-profile-pic:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.6);
+}
+.intro-links a {
+  /* existing styles ... */
+  position: relative;
+  transition:
+    opacity 0.25s ease-out,
+    border-color 0.25s ease-out,
+    transform 0.25s ease-out,
+    text-shadow 0.25s ease-out;
+}
+
+.intro-links a:hover {
+  opacity: 1;
+  border-color: rgba(179, 170, 255, 0.7);
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px rgba(179, 170, 255, 0.7);
+}
 
 @media (max-width:900px)
 {

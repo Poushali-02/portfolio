@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 .portfolio-bg {
   min-height: 100vh;
   width: 100vw;
@@ -37,7 +42,7 @@
   margin: 0;
   padding: 0;
 }
-.portfolio-navbar li {
+.portfolio-navbar li a{
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;

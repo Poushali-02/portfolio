@@ -1,3 +1,4 @@
+/* ==== BASE LAYOUT ==== */
 
 .projects-section-bg {
 	width: 100vw;
@@ -8,77 +9,140 @@
 	gap: 2rem;
 }
 
+/* Optional section title styling to match overall theme */
+.projects-title {
+  color: #fff;
+  font-size: 3vw;
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 400;
+  margin-bottom: 3vw;
+  text-align: center;
+  letter-spacing: 0.12em;
+}
+
+/* Container holding left & right cards */
+.project-main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+/* Left / right columns */
 .project-left, .project-right {
     flex: 0 50% 0;
 	display: flex;
 	justify-content: center;
 }
+
+/* ==== CARD BASE STYLING ==== */
+
 .project-card {
-	border: 3px solid #b39cff;
-	box-shadow: 0 0 24px 0 #000a;
-	border-radius: 0.5vw;
-	padding: 2.5vw 2vw 1.5vw 2vw;
-	width: 100%;
-	max-width: 480px;
-	min-width: 260px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	position: relative;
-	transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-	will-change: transform, box-shadow;
-	cursor:default;
+  border: 3px solid #b39cff;
+  box-shadow: 0 0 24px 0 #000a;
+  border-radius: 0.5vw;
+  padding: 2.5vw 2vw 1.5vw 2vw;
+  width: 100%;
+  max-width: 480px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background: radial-gradient(circle at top left, #453a7b 0, #141020 55%, #080612 100%);
+  cursor: default;
+
+  /* smooth hover feel */
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease-out,
+    background 0.35s ease-out;
+
+  /* entry animation */
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  animation: projectFadeUp 0.7s ease-out forwards;
 }
 
-.projects-title {
-	color: #fff;
-	font-size: 3vw;
-	font-family: 'Merriweather', 'Georgia', serif;
-	font-weight: 400;
-	margin-top: 3vw;
-	margin-bottom: 3vw;
-	text-align: center;
-}
-
+/* second card subtle color variation */
 .project-card:nth-child(2) {
-	border-color: #b3b3b3;
+  border-color: #b3b3b3;
 }
 
+/* Staggered animation if multiple cards in same container */
+.project-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.project-card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.project-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
 
+/* Hover interaction */
 .project-card:hover {
-	transform: translateY(-8px) scale(1.035);
-	box-shadow: 0 8px 32px 0 #b39cff55, 0 0 24px 0 #000a;
+  transform: translateY(-8px) scale(1.035);
+  box-shadow: 0 8px 32px 0 #b39cff55, 0 0 30px 0 #000a;
+  border-color: #d3c6ff;
+  background: radial-gradient(circle at top left, #5b4bb5 0, #141020 55%, #05040a 100%);
 }
+
+/* Optional subtle glow accent on hover */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 140deg,
+    rgba(179, 156, 255, 0.0),
+    rgba(179, 156, 255, 0.3),
+    rgba(179, 156, 255, 0.0)
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-out;
+}
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* ==== TEXT STYLING ==== */
 
 .project-name {
-	color: #fff;
-	font-size: 2vw;
-	font-family: 'Merriweather', 'Georgia', serif;
-	font-weight: 900;
-	margin: 0 0 1vw 0;
-	text-align: center;
-	letter-spacing: 0.04em;
-	text-shadow: 2px 2px 8px #000, 0 2px 8px #222;
+  color: #fff;
+  font-size: 2vw;
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 900;
+  margin: 0 0 1vw 0;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-shadow: 2px 2px 8px #000, 0 2px 8px #222;
 }
 
 .project-desc {
-	color: #fff;
-	font-size: 1.1vw;
-	font-family: 'Merriweather', 'Georgia', serif;
-	font-weight: 400;
-	margin: 0 0 2vw 0;
-	text-align: center;
-	line-height: 1.5;
-	letter-spacing: 0.02em;
+  color: #fff;
+  font-size: 1.1vw;
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 400;
+  margin: 0 0 2vw 0;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
+
+/* ==== LINKS / BUTTONS ==== */
+
 .project-links {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
-  cursor: pointer
 }
 
 .project-live-link {
@@ -90,12 +154,18 @@
   font-size: 0.85rem;
   font-family: 'Merriweather', 'Georgia', serif;
   background: rgba(179, 156, 255, 0.15);
-  transition: background 0.2s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .project-live-link:hover {
   background: rgba(179, 156, 255, 0.35);
   transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(179, 156, 255, 0.35);
 }
 
 .project-git-icon {
@@ -106,7 +176,10 @@
   justify-content: center;
   color: #b39cff;
   text-decoration: none;
-  transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
   opacity: 0.8;
 }
 
@@ -121,59 +194,99 @@
   transform: translateY(-1px) scale(1.05);
 }
 
+/* ==== TECH CHIP LIST ==== */
+
 .project-tech-list {
-  list-style: none;              
+  list-style: none;
   margin: 1rem 0 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;               
-  gap: 0.5rem;                   
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: center;
 }
 
 .project-tech-list li {
   padding: 0.25rem 0.75rem;
-  border-radius: 999px;          
+  border-radius: 999px;
   border: 1px solid #b39cff;
   color: #fff;
   font-size: 0.8rem;
   font-family: 'Merriweather', 'Georgia', serif;
   letter-spacing: 0.03em;
   background: rgba(179, 156, 255, 0.1);
+  backdrop-filter: blur(4px);
 }
 
+/* ==== ENTRY ANIMATION ==== */
+
+@keyframes projectFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==== RESPONSIVE ==== */
+
 @media (max-width: 900px) {
-	.project-main {
-		flex-direction: column;
-		align-items: center;
-		gap: 4vw;
-	}
-	.project-card {
-		width: 80vw;
-		min-width: 180px;
-		max-width: 95vw;
-		font-size: 3vw;
-	}
-	.project-name {
-		font-size: 4vw;
-	}
-	.project-desc {
-		font-size: 2.2vw;
-	}
-	.project-links {
-		gap: 0.75rem;
-	}
+  .projects-section-bg {
+    padding: 10vw 4vw;
+  }
 
-	.project-git-icon {
-		width: 2.4rem;
-		height: 2.4rem;
-  	}
-	.project-tech-list {
-		gap: 0.4rem;
-	}
+  .projects-title {
+    font-size: 6vw;
+    margin-bottom: 6vw;
+  }
 
-	.project-tech-list li {
-		font-size: 0.9rem;
-		padding: 0.25rem 0.6rem;
-	}
+  .project-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  .project-left,
+  .project-right {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .project-card {
+    width: 80vw;
+    min-width: 180px;
+    max-width: 95vw;
+    font-size: 3vw;
+    padding: 5vw 4vw 4vw 4vw;
+    border-radius: 3vw;
+  }
+
+  .project-name {
+    font-size: 5vw;
+  }
+
+  .project-desc {
+    font-size: 3.2vw;
+  }
+
+  .project-links {
+    gap: 0.75rem;
+  }
+
+  .project-git-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .project-tech-list {
+    gap: 0.4rem;
+  }
+
+  .project-tech-list li {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.6rem;
+  }
 }

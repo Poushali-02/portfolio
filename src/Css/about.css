@@ -1,61 +1,117 @@
-/* ABOUT LAYOUT */
 .portfolio-about {
   width: 100vw;
   max-width: 1500px;
-  margin: 0 auto;
-  z-index: 1;
+  margin: auto;
+  padding: 10vw;
+  border-radius: 16px;
+  border: 3px solid rgba(212, 160, 241, 0.25);
+  opacity: 0;
+  transform: translateY(24px);
+  animation: aboutFadeUp 0.7s ease-out forwards;
 }
 
-/* title */
+.about-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.about-main .portfolio-left {
+  padding-left: 0;
+}
+.about-main .portfolio-right {
+  padding-right: 0;
+}
+
 .about-title {
-  margin-top: 7vw;
+  margin-top: 2vw;
   text-align: center;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: aboutTitleUp 0.7s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 .about-title h2 {
   color: #fff;
-	font-size: 5vw;
-	font-family: 'Merriweather', 'Georgia', serif;
-	font-weight: 400;
-	text-align: center;
+  font-size: 5vw;
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.18em;
 }
 
-/* text */
 .about-text {
   color: #fff;
   font-family: "Merriweather", "Georgia", serif;
   font-weight: 400;
-  padding: 0 0 2vw  8vw;
+
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.2em;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
+  max-width: 900px;
+
+  opacity: 0;
+  transform: translateY(16px);
+  animation: aboutTextUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
-/* right column svg */
+.about-text .about-highlight {
+  color: #f2e4ff;
+  text-shadow: 0 0 12px rgba(212, 160, 241, 0.55);
+}
+
 .about-right {
   display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateY(18px);
+  animation: aboutSvgUp 0.8s ease-out forwards;
+  animation-delay: 0.35s;
 }
 
 .about-svg svg {
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
+  height: 20rem;
   stroke: #ffffff;
   fill: none;
+  opacity: 0.7;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
+  transition:
+    opacity 0.35s ease-out,
+    transform 0.35s ease-out,
+    filter 0.35s ease-out;
 }
 
-/* SKILLSET BAR */
+.about-svg svg:hover {
+  opacity: 1;
+  transform: translateY(-4px) scale(1.03);
+  filter: drop-shadow(0 0 20px rgba(212, 160, 241, 0.75));
+}
+
 .skillset {
-  margin: 0 auto 10rem;
+  margin-left: 10vw;
+  margin-top: 5vw;
   max-width: 1050px;
   height: 100px;
   border-radius: 16px;
   border: 3px solid rgba(212, 160, 241, 0.35);
-  background: rgba(0, 0, 0, 0.35);
+  background: radial-gradient(circle at top left, rgba(212, 160, 241, 0.25), rgba(0, 0, 0, 0.6));
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.6);
+
+  opacity: 0;
+  transform: translateY(22px);
+  animation: skillsetUp 0.8s ease-out forwards;
+  animation-delay: 0.45s;
 }
 
 .skills {
@@ -77,44 +133,70 @@
   letter-spacing: 0.12em;
   color: #fff;
   opacity: 0.75;
+  background: rgba(15, 8, 32, 0.8);
+  box-shadow: 0 0 0 rgba(212, 160, 241, 0);
   transition:
-    transform 0.2s ease-out,
-    box-shadow 0.2s ease-out,
-    border-color 0.2s ease-out,
-    opacity 0.2s ease-out;
+    transform 0.25s ease-out,
+    box-shadow 0.25s ease-out,
+    border-color 0.25s ease-out,
+    opacity 0.25s ease-out,
+    background 0.25s ease-out;
 }
 
 .skill:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 0 18px rgba(212, 160, 241, 0.55);
-  border-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.85);
   opacity: 1;
+  background: radial-gradient(circle at top, rgba(212, 160, 241, 0.4), rgba(15, 8, 32, 0.9));
   cursor: default;
 }
 
-/* RESPONSIVE */
+.skill:nth-child(3n) {
+  animation: skillPulse 4s ease-in-out infinite;
+}
+
+@keyframes aboutFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes aboutTitleUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes aboutTextUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes aboutSvgUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes skillsetUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes skillPulse {
+  0%   { box-shadow: 0 0 0 rgba(212, 160, 241, 0); }
+  50%  { box-shadow: 0 0 16px rgba(212, 160, 241, 0.6); }
+  100% { box-shadow: 0 0 0 rgba(212, 160, 241, 0); }
+}
+
 @media (max-width: 900px) {
-  .portfolio-main {
-    flex-direction: column;
-    height: auto;
-    padding: 4vw 0;
-  }
-
-  .portfolio-left,
-  .portfolio-right {
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-  }
-
   .about-title h2 {
     font-size: 2.4rem;
+  }
+
+  .about-main {
+    flex-direction: column;
+    gap: 2.5rem;
   }
 
   .about-text {
     text-align: center;
     letter-spacing: 0.16em;
     font-size: 0.9rem;
+    padding: 0 8vw 2rem 8vw;
   }
 
   .about-svg svg {
@@ -125,6 +207,6 @@
   .skillset {
     height: auto;
     padding: 1.5rem 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 }

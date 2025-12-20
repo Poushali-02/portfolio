@@ -44,7 +44,7 @@ function ExperienceCard({ exp }) {
 
 function ExperiencesSection() {
   return (
-    <div className="portfolio-bg">
+    <div id="experiences" className="portfolio-bg">
       <section className="skills-section">
         <div className="skills-title">
           <h2>Experiences</h2>

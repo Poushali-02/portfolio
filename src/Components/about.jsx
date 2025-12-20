@@ -1,20 +1,25 @@
 import '../App.css';
 import '../Css/about.css';
+import Typewriter from "../Components/Typewriter";
 
 function About() {
   return (
-    <div className="portfolio-bg">
+    <div id="about" className="portfolio-bg">
       <div className="about-title">
         <h2>About Me</h2>
       </div>
       <div className="portfolio-about">
-        <div className="portfolio-main">
+        <div className="about-main">
           <div className="portfolio-left">            
             <p className="about-text">
               I AM A PASSIONATE AI AND MACHINE LEARNING DEVELOPER INTERESTED IN THE DATA SCIENCE FIELD.
               I CAN DELIVER EFFICIENT PROJECTS, ML MODELS, AND DATA ANALYSIS IN A PROFESSIONAL MANNER.
             </p>
-            <p className='about-text'>BECAUSE WHERE THERE IS DATA, THERE IS A WAY.</p>
+            <p className='about-text'>
+              <Typewriter
+              text="Because where there is data, there is a way."
+              />
+            </p>
           </div>
 
           <div className="portfolio-right about-right">

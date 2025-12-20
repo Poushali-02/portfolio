@@ -36,7 +36,7 @@ function Skillset() {
       );
 
   return (
-    <div className="portfolio-bg">
+    <div id="skills" className="portfolio-bg">
       <section className="skills-section">
         <div className="skills-title">
           <h2>Skillset</h2>
