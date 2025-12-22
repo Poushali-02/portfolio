@@ -1,8 +1,8 @@
 .portfolio-about {
   width: 100vw;
-  max-width: 1500px;
+  max-width: 1000px;
   margin: auto;
-  padding: 10vw;
+  padding: 5vw;
   border-radius: 16px;
   border: 3px solid rgba(212, 160, 241, 0.25);
   opacity: 0;
@@ -27,7 +27,6 @@
 .about-title {
   margin-top: 2vw;
   text-align: center;
-  opacity: 0;
   transform: translateY(16px);
   animation: aboutTitleUp 0.7s ease-out forwards;
   animation-delay: 0.1s;
@@ -37,9 +36,9 @@
   color: #fff;
   font-size: 5vw;
   font-family: 'Merriweather', 'Georgia', serif;
-  font-weight: 400;
+  font-weight: bold;
   text-align: center;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
 }
 
 .about-text {
@@ -57,6 +56,16 @@
   transform: translateY(16px);
   animation: aboutTextUp 0.8s ease-out forwards;
   animation-delay: 0.2s;
+}
+
+.about-text-hero{
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1.6;
+  letter-spacing: 0.2em;
+  font-size: 1.3vw;
+  max-width: 900px;
 }
 
 .about-text .about-highlight {
@@ -93,12 +102,12 @@
   transform: translateY(-4px) scale(1.03);
   filter: drop-shadow(0 0 20px rgba(212, 160, 241, 0.75));
 }
-
 .skillset {
   margin-left: 10vw;
   margin-top: 5vw;
-  max-width: 1050px;
-  height: 100px;
+  margin-right: 5vw;
+  max-width: 1000px;
+  min-height: 100px;
   border-radius: 16px;
   border: 3px solid rgba(212, 160, 241, 0.35);
   background: radial-gradient(circle at top left, rgba(212, 160, 241, 0.25), rgba(0, 0, 0, 0.6));
@@ -107,21 +116,36 @@
   justify-content: center;
   backdrop-filter: blur(6px);
   box-shadow: 0 0 28px rgba(0, 0, 0, 0.6);
-
   opacity: 0;
   transform: translateY(22px);
   animation: skillsetUp 0.8s ease-out forwards;
   animation-delay: 0.45s;
+  overflow: hidden;
+}
+
+.skills-container {
+  width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
 }
 
 .skills {
   list-style: none;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   justify-content: center;
+  max-height: 6vw;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.4s ease;
+}
+
+.skills.expanded {
+  max-height: 200px;
+  padding-bottom: 1rem;
 }
 
 .skill {
@@ -141,6 +165,7 @@
     border-color 0.25s ease-out,
     opacity 0.25s ease-out,
     background 0.25s ease-out;
+  white-space: nowrap;
 }
 
 .skill:hover {
@@ -183,8 +208,22 @@
 }
 
 @media (max-width: 900px) {
+  
+  .portfolio-about {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 5vh;
+    padding: 1vw;
+    border: 2px solid rgba(212, 160, 241, 0.25);
+  }
+
+  .about-title {
+    padding-top: 5vh;
+  }
+
   .about-title h2 {
-    font-size: 2.4rem;
+    font-size: 5vh;
+    font-weight: bold;
   }
 
   .about-main {
@@ -193,20 +232,24 @@
   }
 
   .about-text {
-    text-align: center;
+    text-align: left;
     letter-spacing: 0.16em;
     font-size: 0.9rem;
-    padding: 0 8vw 2rem 8vw;
+    padding: 2vw;
+  }
+
+  .about-text-hero{
+    text-align: left;
+    letter-spacing: 0.16em;
+    font-size: 0.9rem;
+    padding: 2vw;
   }
 
   .about-svg svg {
-    width: 140px;
-    height: 140px;
+    display: none;
   }
 
   .skillset {
-    height: auto;
-    padding: 1.5rem 1rem;
-    margin-bottom: 4rem;
+    display: none;
   }
 }

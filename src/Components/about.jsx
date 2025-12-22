@@ -15,7 +15,7 @@ function About() {
               I AM A PASSIONATE AI AND MACHINE LEARNING DEVELOPER INTERESTED IN THE DATA SCIENCE FIELD.
               I CAN DELIVER EFFICIENT PROJECTS, ML MODELS, AND DATA ANALYSIS IN A PROFESSIONAL MANNER.
             </p>
-            <p className='about-text'>
+            <p className='about-text-hero'>
               <Typewriter
               text="Because where there is data, there is a way."
               />
@@ -78,7 +78,7 @@ function About() {
           </div>
         </div>
         <div className="skillset">
-          <ul className="skills">
+          <ul className="skills" id="skillsList">
             <li className="skill">Python</li>
             <li className="skill">Scikit-learn</li>
             <li className="skill">TensorFlow</li>
