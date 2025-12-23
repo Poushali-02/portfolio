@@ -13,7 +13,7 @@ function About() {
           <div className="portfolio-left">            
             <p className="about-text">
               I AM A PASSIONATE AI AND MACHINE LEARNING DEVELOPER INTERESTED IN THE DATA SCIENCE FIELD.
-              I CAN DELIVER EFFICIENT PROJECTS, ML MODELS, AND DATA ANALYSIS IN A PROFESSIONAL MANNER.
+              I CAN DELIVER EFFICIENT PROJECTS, WORKFLOWS, ML-DL MODELS, AND DATA ANALYSIS IN A PROFESSIONAL MANNER.
             </p>
             <p className='about-text-hero'>
               <Typewriter
