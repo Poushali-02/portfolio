@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -137,6 +141,7 @@ html {
   .portfolio-navbar {
     position: fixed;
     padding: 1.5rem;
+    justify-content: space-between;
   }
 
   .hamburger {
