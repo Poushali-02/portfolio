@@ -40,7 +40,9 @@ function Contact() {
   return (
     <div id="contact" className="portfolio-bg">
       <section className="contact-section">
-        <h2 className="contact-title">Contact Me</h2>
+        <div className="contact-title">
+          <h2>Contact Me</h2>
+        </div>
         <p className="contact-text">
           Have an idea, opportunity, or question? Drop a message.
         </p>
