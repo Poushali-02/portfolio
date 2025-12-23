@@ -1,10 +1,16 @@
 import { useState } from "react"; 
 import "../App.css";
 import "../Css/skills.css";
-import skills from "./elements/skills.js"; 
+
+import skillIcons from "./elements/all_skills.jsx";
+import skills from "./data/skills.js";
 
 const requirementTags = Array.from(
-  new Set(skills.flatMap((s) => s.requirement))
+  new Set(
+    skills
+      .filter((s) => Array.isArray(s.requirement))
+      .flatMap((s) => s.requirement)
+  )
 );
 
 const categories = ["All", ...requirementTags];
@@ -13,6 +19,7 @@ function FilterButton({ label, isActive, onClick }) {
   const className_ = isActive
     ? "skills-filter-btn active"
     : "skills-filter-btn";
+
   return (
     <button className={className_} onClick={onClick}>
       {label}
@@ -27,13 +34,14 @@ function Skillset() {
     activeCategory === "All"
       ? skills
       : skills.filter(
-        (s) =>
-          Array.isArray(s.requirement) &&
-          s.requirement.some(
-            (req) =>
-              req.trim().toLowerCase() === activeCategory.trim().toLowerCase()
-          )
-      );
+          (s) =>
+            Array.isArray(s.requirement) &&
+            s.requirement.some(
+              (req) =>
+                req.trim().toLowerCase() ===
+                activeCategory.trim().toLowerCase()
+            )
+        );
 
   return (
     <div id="skills" className="portfolio-bg">
@@ -55,23 +63,19 @@ function Skillset() {
 
         <div className="skills-grid">
           {filteredSkills.map((skill, idx) => (
-            <article key={idx} className="skill-card">
-              <div className="skill-card-header">
-                <div className="skill-card-left">
-                  <span className="skill-card-name">{skill.skillname}</span>
-                  <span className="skill-card-subCategory">
-                    {skill.subCategory}
-                  </span>
+            <article className="skill-card">
+            <div className="skill-card-content">
+              <div className="skill-card-icon-section">
+                <div className="skill-card-icon">
+                  {skillIcons[skill.skillname] ?? null}
                 </div>
-                <span className="skill-card-level">{skill.level}</span>
               </div>
-              <div className="skill-progress">
-                <div
-                  className="skill-progress-fill"
-                  style={{ width: `${skill.score || 0}%` }}
-                />
+              <div className="skill-card-header">
+                <h3 className="skill-card-name">{skill.skillname}</h3>
+                <span className="skill-card-subCategory">{skill.subCategory}</span>
               </div>
-            </article>
+            </div>
+          </article>
           ))}
         </div>
       </section>
