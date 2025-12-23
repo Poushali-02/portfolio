@@ -100,7 +100,29 @@
   letter-spacing: 0.06em;
   text-shadow: 1px 1px 4px #000;
 }
+/* LinkedIn link styling for experience cards */
+.exp-linkedin-link {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem auto 0.7rem auto;
+  padding: 0.35em 1.1em 0.35em 1.1em;
+  font-size: 0.97rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #c8b8db !important;
+  background: rgba(145, 106, 155, 0.8);
+  border: 1px solid rgb(29, 8, 34);
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(10,102,194,0.08);
+}
 
+.exp-linkedin-link:hover {
+  background: #010911;
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 4px 16px rgba(10,102,194,0.16);
+}
 .exp-card-type {
   align-self: center;
   font-size: 0.75rem;

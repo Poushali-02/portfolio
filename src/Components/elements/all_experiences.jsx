@@ -24,7 +24,8 @@ const Experiences = [
             </>
         ),
         images: [],
-        type: "Activity"
+        type: "Activity",
+        linkedIn: ""
     },
     {
         title: "Contributed at Canner",
@@ -45,7 +46,8 @@ const Experiences = [
             </>
         ),
         images: [],
-        type: "Open Source"
+        type: "Open Source",
+        linkedIn: "https://www.linkedin.com/posts/poushali020106_hacktoberfest-opensource-developercommunity-activity-7387739799538806784-Lngu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFXR5BEB4nlj47fYLG9_wmzFdIVuR2IXZl4"
     },
     {
         title: "Came first in college",
@@ -54,7 +56,8 @@ const Experiences = [
          academic discipline. This experience reflects the ability to quickly adapt to a new academic 
          environment, manage multiple subjects in parallel, and maintain high performance under exam pressure.`,
         images: [prizeImg],
-        type: "Achievement"
+        type: "Achievement",
+        linkedIn:"https://www.linkedin.com/posts/poushali020106_this-september-started-with-joy-as-i-attended-activity-7371098679010562048-VJt7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFXR5BEB4nlj47fYLG9_wmzFdIVuR2IXZl4"
     },
     {
         title: "Experience at Binary Hackathon",
@@ -64,7 +67,8 @@ const Experiences = [
         under time pressure, dividing responsibilities across development and 
         presentation, and learning how to turn vague problem statements into working technical prototypes.`,
         images: [binary1Img, binary2Img],
-        type: "Activity"
+        type: "Activity",
+        linkedIn: "https://www.linkedin.com/posts/poushali020106_hackathon-innovation-ai-activity-7312357007057915905-cV2k?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFXR5BEB4nlj47fYLG9_wmzFdIVuR2IXZl4"
     },
 ]
 export default Experiences;
