@@ -55,7 +55,8 @@ html {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 4rem;
 }
 
 .portfolio-navbar .nav-links li {
