@@ -49,22 +49,31 @@
   animation: expCardUp 0.7s ease-out forwards;
 }
 
-.exp-card:nth-child(1) { animation-delay: 0.18s; }
-.exp-card:nth-child(2) { animation-delay: 0.26s; }
-.exp-card:nth-child(3) { animation-delay: 0.34s; }
-.exp-card:nth-child(4) { animation-delay: 0.42s; }
+.exp-card:nth-child(1) {
+  animation-delay: 0.18s;
+}
+
+.exp-card:nth-child(2) {
+  animation-delay: 0.26s;
+}
+
+.exp-card:nth-child(3) {
+  animation-delay: 0.34s;
+}
+
+.exp-card:nth-child(4) {
+  animation-delay: 0.42s;
+}
 
 .exp-card::before {
   content: "";
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: conic-gradient(
-    from 140deg,
-    rgba(179, 156, 255, 0.0),
-    rgba(179, 156, 255, 0.35),
-    rgba(179, 156, 255, 0.0)
-  );
+  background: conic-gradient(from 140deg,
+      rgba(179, 156, 255, 0.0),
+      rgba(179, 156, 255, 0.35),
+      rgba(179, 156, 255, 0.0));
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease-out;
@@ -100,6 +109,7 @@
   letter-spacing: 0.06em;
   text-shadow: 1px 1px 4px #000;
 }
+
 /* LinkedIn link styling for experience cards */
 .exp-linkedin-link {
   display: flex;
@@ -114,15 +124,16 @@
   border: 1px solid rgb(29, 8, 34);
   border-radius: 6px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(10,102,194,0.08);
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.08);
 }
 
 .exp-linkedin-link:hover {
   background: #010911;
   color: #fff;
   border-color: #fff;
-  box-shadow: 0 4px 16px rgba(10,102,194,0.16);
+  box-shadow: 0 4px 16px rgba(10, 102, 194, 0.16);
 }
+
 .exp-card-type {
   align-self: center;
   font-size: 0.75rem;
@@ -172,14 +183,31 @@
 }
 
 .exp-card-images {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
   gap: 8px;
   margin-top: 0.4rem;
 }
 
+/* First image (if 3 images) spans full width */
+.exp-card-images img:first-child:nth-last-child(3) {
+  grid-column: 1 / -1;
+}
+
+/* If only 2 images, show side by side */
+.exp-card-images img:first-child:nth-last-child(2) {
+  grid-column: auto;
+}
+
+/* If only 1 image, span full width */
+.exp-card-images img:only-child {
+  grid-column: 1 / -1;
+}
+
 .exp-card-image {
-  height: 10em;
+  width: 100%;
+  height: 200px;
   border-radius: 8px;
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -194,18 +222,103 @@
 
 
 @keyframes expFadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lightbox Styles */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-out;
+  cursor: pointer;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: default;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  animation: imageZoomIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes imageZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments for lightbox */
+@media (max-width: 768px) {
+
+  .lightbox-image {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
 }
 
 @keyframes expTitleUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes expCardUp {
-  from { opacity: 0; transform: translateY(18px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 
@@ -221,10 +334,11 @@
     grid-template-columns: 1fr;
     gap: 1.6rem;
   }
-  .exp-card-description{
+
+  .exp-card-description {
     text-align: left;
   }
-  
+
   .exp-card-images {
     flex-direction: column;
     gap: 1vw;

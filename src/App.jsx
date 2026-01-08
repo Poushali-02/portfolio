@@ -5,6 +5,7 @@ import Projects from './Components/projects';
 import About from './Components/about';
 import Skillset from './Components/skills';
 import ExperiencesSection from './Components/experiences';
+import Blogs from './Components/blogs';
 import Contact from './Components/contact';
 import { useEffect } from 'react';
 
@@ -37,6 +38,7 @@ function App() {
       <About />
       <Skillset />
       <ExperiencesSection />
+      <Blogs />
       <Contact />
     </>
   );

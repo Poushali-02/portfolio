@@ -2,12 +2,39 @@ import "../App.css";
 import "../Css/skills.css";
 import "../Css/experiences.css";
 import Experiences from "./elements/all_experiences";
+import { useState } from "react";
+import ReactDOM from "react-dom";
 
 function getTypeClass(type) {
+  if (!type) return "exp-type-default";
   return "exp-type-" + type.toLowerCase().replace(/\s+/g, "-");
 }
 
 function ExperienceCard({ exp }) {
+  const [lightboxImage, setLightboxImage] = useState(null);
+
+  const openLightbox = (imageSrc) => {
+    setLightboxImage(imageSrc);
+  };
+
+  const closeLightbox = () => {
+    setLightboxImage(null);
+  };
+
+  const handleLightboxClick = (e) => {
+    // Close if clicking on the overlay (not the image itself)
+    if (e.target === e.currentTarget) {
+      closeLightbox();
+    }
+  };
+
+  // Handle escape key
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  };
+
   return (
     <article className="exp-card">
       <header className="exp-card-header">
@@ -46,9 +73,32 @@ function ExperienceCard({ exp }) {
               src={src}
               alt={`${exp.title} ${i + 1}`}
               className="exp-card-image"
+              onClick={() => openLightbox(src)}
+              style={{ cursor: 'pointer' }}
             />
           ))}
         </div>
+      )}
+
+      {/* Lightbox Modal - Rendered at body level using portal */}
+      {lightboxImage && ReactDOM.createPortal(
+        <div
+          className="lightbox-overlay"
+          onClick={handleLightboxClick}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="lightbox-content">
+            <img
+              src={lightboxImage}
+              alt="Fullscreen view"
+              className="lightbox-image"
+            />
+          </div>
+        </div>,
+        document.body
       )}
     </article>
   );

@@ -1,26 +1,28 @@
 import prizeImg from '../../assets/prize.jpeg';
 import binary1Img from '../../assets/binary1.jpeg';
 import binary2Img from '../../assets/binary2.jpeg';
-
+import mlKolkata from '../../assets/mlKolkata.jpeg';
+import prizes from '../../assets/prizes.jpg'
+import recieve from '../../assets/recieve.jpg'
 
 const Experiences = [
     {
         title: "Community Member",
         description: (
             <>
-            Actively engaged as an extended community member of <a
-            href="https://www.devdotcom.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="exp-link"
-            >
-             devdotcom
-            </a>{" "}
-            for over a year, participating in events, 
-            discussions, and knowledge‑sharing sessions focused on development, careers, 
-            and emerging technologies. This involvement has helped build a professional network, 
-            stay updated with industry practices, and contribute back to the community by
-            supporting peers and juniors
+                Actively engaged as an extended community member of <a
+                    href="https://www.devdotcom.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="exp-link"
+                >
+                    devdotcom
+                </a>{" "}
+                for over a year, participating in events,
+                discussions, and knowledge‑sharing sessions focused on development, careers,
+                and emerging technologies. This involvement has helped build a professional network,
+                stay updated with industry practices, and contribute back to the community by
+                supporting peers and juniors
             </>
         ),
         images: [],
@@ -31,18 +33,18 @@ const Experiences = [
         title: "Contributed at Canner",
         description: (
             <>
-            Contributed to the open‑source project <a
-            href="https://github.com/CannerAI/CannerAI"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="exp-link"
-            >
-            CannerAI
-            </a>{" "} , 
-            working with an existing codebase, issues, and pull‑request workflow on GitHub. This experience 
-            involved understanding project architecture, following contribution guidelines, 
-            communicating through issues and reviews, and aligning changes with maintainers’ 
-            feedback—building confidence in collaborative development and real‑world open‑source practices.
+                Contributed to the open‑source project <a
+                    href="https://github.com/CannerAI/CannerAI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="exp-link"
+                >
+                    CannerAI
+                </a>{" "} ,
+                working with an existing codebase, issues, and pull‑request workflow on GitHub. This experience
+                involved understanding project architecture, following contribution guidelines,
+                communicating through issues and reviews, and aligning changes with maintainers’
+                feedback—building confidence in collaborative development and real‑world open‑source practices.
             </>
         ),
         images: [],
@@ -57,7 +59,7 @@ const Experiences = [
          environment, manage multiple subjects in parallel, and maintain high performance under exam pressure.`,
         images: [prizeImg],
         type: "Achievement",
-        linkedIn:"https://www.linkedin.com/posts/poushali020106_this-september-started-with-joy-as-i-attended-activity-7371098679010562048-VJt7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFXR5BEB4nlj47fYLG9_wmzFdIVuR2IXZl4"
+        linkedIn: "https://www.linkedin.com/posts/poushali020106_this-september-started-with-joy-as-i-attended-activity-7371098679010562048-VJt7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFXR5BEB4nlj47fYLG9_wmzFdIVuR2IXZl4"
     },
     {
         title: "Experience at Binary Hackathon",
@@ -70,5 +72,12 @@ const Experiences = [
         type: "Activity",
         linkedIn: "https://www.linkedin.com/posts/poushali020106_hackathon-innovation-ai-activity-7312357007057915905-cV2k?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFXR5BEB4nlj47fYLG9_wmzFdIVuR2IXZl4"
     },
+    {
+        title: "Experience at Global GenAI Hackathon",
+        description: `Participated and won second prize in Weights and biases track at the Global GenAI Hackathon organized by ML Kolkata. Finished our project on the last minute. Took deadline pressure and learned a lot from it. Collaborated with our teammates and presented a working prototype.`,
+        images: [mlKolkata, prizes, recieve],
+        type: "Activity",
+        linkedIn: "https://www.linkedin.com/posts/poushali020106_yesterday-was-a-total-blast-i-remember-activity-7411090129915670528-spfM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFXR5BEB4nlj47fYLG9_wmzFdIVuR2IXZl4"
+    }
 ]
 export default Experiences;

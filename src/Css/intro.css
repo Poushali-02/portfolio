@@ -135,6 +135,10 @@
 
 .intro-links{
   padding: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;   
+  gap: 20px;
 }
 
 .portfolio-right{

@@ -24,11 +24,12 @@ function Intro() {
           <span className="hamburger-line" />
         </button>
         <ul className={`nav-links ${isOpen ? "nav-open" : ""}`}>
-          <li><a href="#home" onClick={closeMenu}>Home</a></li>
+          <li><a href="/" onClick={closeMenu}>Home</a></li>
           <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
           <li><a href="#about" onClick={closeMenu}>About</a></li>
           <li><a href="#skills" onClick={closeMenu}>Skillset</a></li>
           <li><a href="#experiences" onClick={closeMenu}>Experiences</a></li>
+          <li><a href="#blogs" onClick={closeMenu}>Blogs</a></li>
           <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
         </ul>
       </nav>
@@ -45,6 +46,9 @@ function Intro() {
             </a>
             <a href="www.linkedin.com/in/poushali020106" target="_blank" rel="noopener noreferrer">
               LinkedIn
+            </a>
+            <a href="https://medium.com/@poushali02" target="_blank" rel="noopener noreferrer">
+              Medium
             </a>
             <a href="mailto:poushalibhattacharyya02@gmail.com">
               Email
