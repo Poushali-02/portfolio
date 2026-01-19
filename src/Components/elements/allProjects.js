@@ -31,7 +31,7 @@ const projects = [
     github: "https://github.com/ramenartai/Ramen_Art"
   },
   {
-    title: "FstAPI CRUD Ops",
+    title: "FastAPI CRUD Ops",
     description:
     `For a Medium blog, A simple RESTful API built with FastAPI to perform CRUD (Create, Read, Update, Delete) operations on a book collection. This project demonstrates the fundamentals of building APIs with FastAPI, including data persistence using JSON file storage.`,
   
