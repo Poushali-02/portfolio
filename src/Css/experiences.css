@@ -146,6 +146,11 @@
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
+.exp-type-internship {
+  background: rgba(239, 239, 106, 0.329);
+  border-color: rgba(247, 247, 14, 0.329);
+}
+
 .exp-type-achievement {
   background: rgba(34, 197, 94, 0.18);
   border-color: rgba(34, 197, 94, 0.65);

@@ -7,6 +7,15 @@ import recieve from '../../assets/recieve.jpg'
 
 const Experiences = [
     {
+        title: "Backend Intern at Stepout",
+        description: `Working on backend features, API integration, and bug fixes while collaborating with the development team to improve reliability and performance.
+Contributing to cleaner service logic and smoother request handling across the application.
+Gaining practical experience with real-world backend workflows, debugging, and team coordination.`,
+        images: [],
+        type: "Internship",
+        linkedIn: ""
+    },
+    {
         title: "Community Member",
         description: (
             <>
