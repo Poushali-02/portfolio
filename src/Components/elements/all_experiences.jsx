@@ -2,24 +2,47 @@ import prizeImg from '../../assets/prize.jpeg';
 import binary1Img from '../../assets/binary1.jpeg';
 import binary2Img from '../../assets/binary2.jpeg';
 import mlKolkata from '../../assets/mlKolkata.jpeg';
-import prizes from '../../assets/prizes.jpg'
-import recieve from '../../assets/recieve.jpg'
+import prizes from '../../assets/prizes.jpg';
+import recieve from '../../assets/recieve.jpg';
+import hexafalls0 from '../../assets/hexafalls0.jpeg';
+import hexafalls1 from '../../assets/hexafalls1.jpeg';
+import hexafalls2 from '../../assets/hexafalls2.jpeg';
+import stepout0 from '../../assets/stepout0.jpeg';
+import stepout1 from '../../assets/stepout1.jpeg';
+import stepout2 from '../../assets/stepout2.jpeg';
 
 const Experiences = [
     {
-        title: "Backend Intern at Stepout",
-        description: `Working on backend features, API integration, and bug fixes while collaborating with the development team to improve reliability and performance.
-Contributing to cleaner service logic and smoother request handling across the application.
-Gaining practical experience with real-world backend workflows, debugging, and team coordination.`,
-        images: [],
+        title: "Backend Intern at StepOut",
+        description: `I am actively working as in Intern at StepOut, also travelled Bangalore work on-site work at July. Day to day role includes handling client requirements, delivering and maintaining optimized APIs, security checks, and configuring a maintainable backend system. `,
+        images: [stepout1, stepout0, stepout2],
         type: "Internship",
-        linkedIn: ""
+        linkedIn: "https://www.linkedin.com/feed/update/urn:li:activity:7485287201220632577/"
+    },
+    {
+        title: "Hexafalls 2026 Winner",
+        description: (
+            <>
+                Built <a
+                    href="https://github.com/Poushali-02/Angizo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="exp-link"
+                >
+                    Angizo
+                </a>{" "}
+                an AI powered accessibility tool for visually impaired engineers at Hexafalls 2026 organized by JIS University, Agarpara. Bagged the first prize and the winner badge. Absolutely amazing experience and a great learning on team work. 
+            </>
+        ),
+        images: [hexafalls1, hexafalls0, hexafalls2],
+        type: ["Activity", "Achievement"],
+        linkedIn: "https://www.linkedin.com/feed/update/urn:li:activity:7490832657828864000/"
     },
     {
         title: "Community Member",
         description: (
             <>
-                Actively engaged as an extended community member of <a
+                Actively engaged as a core community member of <a
                     href="https://www.devdotcom.in"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -27,7 +50,7 @@ Gaining practical experience with real-world backend workflows, debugging, and t
                 >
                     devdotcom
                 </a>{" "}
-                for over a year, participating in events,
+                for over two years, participating and taking act in events,
                 discussions, and knowledge‑sharing sessions focused on development, careers,
                 and emerging technologies. This involvement has helped build a professional network,
                 stay updated with industry practices, and contribute back to the community by

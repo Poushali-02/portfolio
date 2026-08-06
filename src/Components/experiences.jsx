@@ -5,6 +5,19 @@ import Experiences from "./elements/all_experiences";
 import { useState } from "react";
 import ReactDOM from "react-dom";
 
+function getTypeTags(type) {
+  if (!type) return [];
+
+  if (Array.isArray(type)) {
+    return type.map((tag) => tag.trim()).filter(Boolean);
+  }
+
+  return type
+    .split(",")
+    .map((tag) => tag.trim())
+    .filter(Boolean);
+}
+
 function getTypeClass(type) {
   if (!type) return "exp-type-default";
   return "exp-type-" + type.toLowerCase().replace(/\s+/g, "-");
@@ -12,6 +25,7 @@ function getTypeClass(type) {
 
 function ExperienceCard({ exp }) {
   const [lightboxImage, setLightboxImage] = useState(null);
+  const typeTags = getTypeTags(exp.type);
 
   const openLightbox = (imageSrc) => {
     setLightboxImage(imageSrc);
@@ -40,11 +54,18 @@ function ExperienceCard({ exp }) {
       <header className="exp-card-header">
         <div className="exp-card-center">
           <h3 className="exp-card-title">{exp.title}</h3>
-          <span
-            className={`exp-card-type ${getTypeClass(exp.type)}`}
-          >
-            {exp.type}
-          </span>
+          {typeTags.length > 0 && (
+            <div className="exp-card-tags">
+              {typeTags.map((tag, index) => (
+                <span
+                  key={`${tag}-${index}`}
+                  className={`exp-card-type ${getTypeClass(tag)}`}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 

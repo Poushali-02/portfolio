@@ -134,12 +134,21 @@
   box-shadow: 0 4px 16px rgba(10, 102, 194, 0.16);
 }
 
+.exp-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
 .exp-card-type {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   align-self: center;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  margin-top: 0.25rem;
   padding: 3px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
