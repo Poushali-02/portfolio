@@ -10,7 +10,7 @@ const projects = [
             and reporting capabilities.
         `,
     technologies: ["MCP Server", "AI", "FastMCP", "Postgres"],
-    link: "https://paisa-flow.vercel.app/",
+    link: "",
     github: "https://github.com/Poushali-02/Expense-Tracker-MCP-Server",
   },
   {
