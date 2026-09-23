@@ -15,7 +15,7 @@ const projects = [
         `,
     technologies: ["VS Code Extension","TypeScript", "LangGraph",  "Sarvam AI", "ElevenLabs"],
     link: "",
-    github: "https://github.com/rehodra/nuro_code",
+    github: "https://github.com/Poushali-02/Angizo",
   },
   {
     title: "Paisa Flow MCP Server", // 1
